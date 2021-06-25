@@ -3,7 +3,7 @@ import os
 import csv
 
 dirname = os.path.dirname(__file__)
-directory = os.path.join (dirname,'PDFS','20202021Sem1')
+directory = os.path.join (dirname,'PDFS','20202021Sem2')
 
 certID = ["certID"]
 name = ["Name"]
@@ -21,16 +21,19 @@ for filename in os.listdir(directory):
     pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
     pageObj = pdfReader.getPage(0)
     text = pageObj.extractText()
+    #print(text)
 
     #get name
-    textname = text.partition('that')[2]
-    textname = textname.partition('has')[0]
+    textname = text.partition('SEMESTER 2')[2]
+    textname = textname.partition('HAS')[0]
     name.append(textname)
+    #print(textname)
     
     #get major
-    textmajor = text.partition('2020/2021')[2]
-    textmajor = textmajor.partition('Dean')[0]
+    textmajor = text.partition('LeongDean')[2]
+    textmajor = textmajor.partition('ON08')[0]
     major.append(textmajor)
+    print(textmajor)
 
 
 with open('list.csv', 'w', newline='') as file:
