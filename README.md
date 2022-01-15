@@ -1,7 +1,7 @@
 # Scale-Deanlist-List
 Scale Deanlist List
 
-2021/2022 Sem 1:
+2021/2022 Sem 1:  
 Only scraped from 44799300 - 44801799. Most likely missing some
 
 2020/2021 Sem 2:  
