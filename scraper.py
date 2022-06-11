@@ -6,8 +6,8 @@ import time
 baseurl = 'https://api.accredible.com/v1/credential/generate_certificate_pdf?mode=pdf&credential_id='
 dirname = os.path.dirname(__file__)
 
-for x in range(500):
-    id = 44799300 + x 
+for x in range(250):
+    id = 52683155 + x 
     url = baseurl + str(id)
 
     try:
